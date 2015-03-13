@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.denooze</groupId>
 	<artifactId>pdi-cmisput-plugin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.50-SNAPSHOT</version>
 
 	<properties>
 		<pentaho.version>5.0.1-stable</pentaho.version>
