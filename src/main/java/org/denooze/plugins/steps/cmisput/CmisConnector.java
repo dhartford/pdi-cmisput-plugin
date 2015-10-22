@@ -139,6 +139,9 @@ public class CmisConnector implements Cloneable
 				parameter.put(SessionParameter.BINDING_TYPE, BindingType.ATOMPUB.value());
 				parameter.put(SessionParameter.REPOSITORY_ID, this.cmsProperties.getProperty("cms.repoId"));
 				parameter.put(SessionParameter.OBJECT_FACTORY_CLASS, "org.alfresco.cmis.client.impl.AlfrescoObjectFactoryImpl");
+				//note that kettle brings Apache HTTP Client as well, as of Kettle/PDI 5.0.1, this was http-client version 3.1
+				parameter.put(SessionParameter.HTTP_INVOKER_CLASS, "org.apache.chemistry.opencmis.client.bindings.spi.http.ApacheClientHttpInvoker");
+
 //				parameter.put(SessionParameter.CLIENT_COMPRESSION, "true");
 
 			    CmisBindingFactory factory = CmisBindingFactory.newInstance();
